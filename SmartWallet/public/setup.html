@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <style>
+        div.titulo{
+            padding-top: 5%;
+            padding-bottom: 5%;
+            text-align: center;
+            background-color: #e6e6e6;
+            color: black;
+            border-radius: 5%;
+        }
+        body{
+            background-color: #40739e;
+            text-align: center;
+        }
+        div.main{
+            background-color: white;
+            border-radius: 5%;
+        }
+
+        img.logo{
+            width: 50%;
+            height: 50%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            border-radius: 50%;
+        }
+        input.num{
+            text-align: center;
+        }
+        div.case{
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 3% 0% 5% 0%;
+            background-color:  #e6e6e6;
+        }
+    </style>    
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <div class="main">
+            <div class="titulo">
+                <h1>Configuracion</h1>
+            </div>
+            <img src="images/profileImg.jpeg" alt="Logo" class="logo">
+            <div>
+                <div class="case">
+                    <h3>Plan de presupuesto</h3>
+                    <label for="gasto">Maximo gasto diario:</label>
+                    <br>
+                    <input name="gasto" placeholder="0.00" type="number" min="1" step="any" class="num" id="gasto"/>
+                </div>
+                <br>
+                <div class="case">
+                    <h3>Plan de ahorro</h3>
+                    <label for="meta">Meta de ahorro:</label>
+                    <br>
+                    <input name="meta" placeholder="0.00" type="number" min="1" step="any" class="num" id="meta"/>
+                </div>
+                
+                <br><br>
+                <button class="btn btn-primary" onclick="mainApp.mandaInfo()" >Guardar</button>
+            </div>
+            <br>
+        </div>
+        <hr>
+    </div>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/setup.js"></script>
+</body>
+</html>

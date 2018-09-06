@@ -1,0 +1,509 @@
+*, *:before, *:after {
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #40739e;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  .centertx{
+  text-align: center;
+  }
+  
+  .contact-area {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .contact {
+    position: relative;
+    max-width: 420px;
+    padding: 40px 20px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    .contact {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .contact main {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .contact main section {
+    border-radius: 5px;
+    float: left;
+    width: 100%;
+    background-color: #273c75;
+  }
+  .contact main section .content {
+    float: left;
+    width: 100%;
+    padding: 20px 30px 50px 30px;
+    position: relative;
+    text-align: center;
+  }
+  @media (min-width: 414px) {
+    .contact main section .content {
+      text-align: left;
+    }
+  }
+  .contact main section .content img {
+    display: inline-block;
+    width: 140px;
+    border-radius: 50%;
+  }
+  @media (min-width: 414px) {
+    .contact main section .content img {
+      float: left;
+      width: 30%;
+      margin-right: 10%;
+    }
+  }
+  .contact main section .content aside {
+    float: left;
+    width: 100%;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  @media (min-width: 414px) {
+    .contact main section .content aside {
+      width: 60%;
+    }
+  }
+  .contact main section .content aside h1 {
+    font-weight: 100;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .contact main section .content aside p {
+    font-size: 14px;
+    letter-spacing: .5px;
+    line-height: 160%;
+  }
+  .contact main .title {
+    float: left;
+    width: 100%;
+  
+    max-height: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all 0.55s;
+    -moz-transition: all 0.55s;
+    -o-transition: all 0.55s;
+    transition: all 0.55s;
+  }
+  .contact main .title.active {
+    max-height: 100px;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
+  }
+  .contact main .title.active p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition-delay: .2s;
+  }
+  .contact main .title p {
+    padding: 15px 30px;
+    color: #ECECEE;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  .contact main button {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: #2f3640;
+    color: #ECECEE;
+    border: 0;
+    width: 200px;
+    height: 48px;
+    text-align: center;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: -24px;
+    margin-right: -100px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    transition-delay: .1s;
+    outline: none;
+    overflow: hidden;
+    z-index: 10;
+    font-family: inherit;
+  }
+  .contact main button span {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    transition-delay: .4s;
+    display: block;
+    width: 200px;
+    float: left;
+    padding: 15px 0px;
+  }
+  .contact main button svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .contact main button svg path {
+    fill: #40739e;
+  }
+  .contact main button.active {
+    margin-right: 0;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    margin-bottom: -32.5px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 65px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  .contact main button.active span {
+    opacity: 0;
+    transition-delay: 0s;
+    width: 200px;
+  }
+  .contact main button.active svg {
+    opacity: 1;
+    transition-delay: .5s;
+  }
+  .contact nav {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .contact nav.active {
+    max-height: 600px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+  .contact nav.active a {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+  }
+  .contact nav.active a:nth-of-type(1) {
+    transition-delay: .5s;
+  }
+  .contact nav.active a:nth-of-type(2) {
+    transition-delay: .7s;
+  }
+  .contact nav.active a:nth-of-type(3) {
+    transition-delay: .9s;
+  }
+  .contact nav a {
+    float: left;
+    width: 100%;
+    margin-top: 18px;
+    background-color: #ECECEE;
+    padding: 18px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    position: relative;
+  }
+  @media (min-width: 414px) {
+    .contact nav a {
+      padding: 18px 30px;
+    }
+  }
+  
+  
+  
+  .myButton {
+      -moz-box-shadow:inset 0px 0px 15px 3px #353b48;
+      -webkit-box-shadow:inset 0px 0px 15px 3px #353b48;
+      box-shadow:inset 0px 0px 15px 3px #353b48;
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #353b48), color-stop(1, #353b48));
+      background:-moz-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-webkit-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-o-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-ms-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:linear-gradient(to bottom, #353b48 5%, #353b48 100%);
+      background-color:#2e466e;
+      -moz-border-radius:17px;
+      -webkit-border-radius:17px;
+      border-radius:30px;
+      border:1px solid #2f3640;
+      display:inline-block;
+      cursor:pointer;
+      color:#ECECEE;
+      font-size:20px;
+      padding:6px 13px;
+      text-decoration:none;
+    text-shadow:0px 1px 0px #263666;
+    margin-bottom: 1cm;
+    width: 200px;
+    height: 45px;
+    font-family: inherit;
+  
+  }
+  .myButton:hover {
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #353b48), color-stop(1, #353b48));
+      background:-moz-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-webkit-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-o-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:-ms-linear-gradient(top, #353b48 5%, #353b48 100%);
+      background:linear-gradient(to bottom, #353b48 5%, #353b48 100%);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e',GradientType=0);
+      background-color:#415989;
+  }
+  .myButton:active {
+      position:relative;
+      top:1px;
+  }
+  
+  
+
+  /** EXAMPLE
+  <label class="tgl">
+    <input type="checkbox" />
+    <span data-on="1" data-off="0"></span>
+  </label>
+**/
+.tgl {
+  position: relative;
+  outline: 0;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0 5px 0;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl span {
+  position: relative;
+  display: block;
+  height: 1.8em;
+  line-height: 1.2em;
+  overflow: hidden;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 2em;
+  padding: 0.2em 1em;
+  border: 1px solid #fafafa;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease, padding 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.tgl span:before {
+  position: relative;
+  display: block;
+  line-height: 1.3em;
+  padding: 0 0.2em;
+  font-size: 1em;
+}
+.tgl span:after {
+  position: absolute;
+  display: block;
+  content: '';
+  border-radius: 2em;
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: -1.45em;
+  top: 0.2em;
+  background: #FFFFFF;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 0.97), background 0.3s ease-in-out;
+}
+.tgl input[type="checkbox"] {
+  display: none !important;
+}
+
+.tgl input[type="checkbox"]:not(:checked) + span {
+  background: #de474e;
+  color: #FFFFFF;
+  padding-left: 1.6em;
+  padding-right: 0.4em;
+}
+.tgl input[type="checkbox"]:not(:checked) + span:before {
+  content: attr(data-off);
+  color: #FFFFFF;
+}
+.tgl input[type="checkbox"]:not(:checked) + span:after {
+  background: #FFFFFF;
+  left: 1.6em;
+}
+.tgl input[type="checkbox"]:checked + span {
+  background: #86d993;
+  color: #FFFFFF;
+  padding-right: 1.6em;
+}
+.tgl input[type="checkbox"]:checked + span:before {
+  content: attr(data-on);
+}
+.tgl input[type="checkbox"]:checked + span:after {
+  background: #FFFFFF;
+  left: 100%;
+}
+.tgl input[type="checkbox"]:disabled,
+.tgl input[type="checkbox"]:disabled + span,
+.tgl input[type="checkbox"]:read-only,
+.tgl input[type="checkbox"]:read-only + span {
+  cursor: not-allowed;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span {
+  background: #e3e3e3;
+  color: #999999;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span:before {
+  color: #999999;
+}
+.tgl-gray input[type="checkbox"]:not(:checked) + span:after {
+  background: #ffffff;
+}
+.tgl-inline {
+  display: inline-block !important;
+  vertical-align: top;
+}
+.tgl-inline.tgl {
+  font-size: 16px;
+}
+.tgl-inline.tgl span {
+  min-width: 50px;
+}
+.tgl-inline.tgl span:before {
+  line-height: 1.4em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+.tgl-inline-label {
+  display: inline-block !important;
+  vertical-align: top;
+  line-height: 26px;
+}
+
+.simple-toggle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  text-align: center;
+  margin: auto;
+}
+.title,
+.subtitle {
+  display: block;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+.title {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #262626;
+}
+.subtitle {
+  margin-bottom: 20px;
+  opacity: 0.4;
+}
+.code {
+  display: inline-block;
+  color: grey;
+  border-radius: 5px;
+  border: 1px solid #c9c9c9;
+  background-color: #d6d6d6;
+  margin: 10px;
+  text-align: left;
+  padding: 10px 10px 0 0;
+  line-height: 0.6em;
+  max-width: 300px;
+}
+.footer {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.4;
+}
+
+
+
+
+  

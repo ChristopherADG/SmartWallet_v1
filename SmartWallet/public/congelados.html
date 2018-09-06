@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/congelados.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+          <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed'>
+</head>
+<body>
+<div class="top-part">
+    <h2 class="congelados">Ahorro</h2>
+    <div class="meta-user">
+        <p style="margin: 0;">Tu meta: </p>
+        <p style="color: rgba(72, 126, 176,1.0); margin: 0;padding-top: 5px" id="meta">...</p>
+    </div>
+    <button type="button" class="btn-back" onclick="window.location.replace('menu.html')"><i class="fas fa-arrow-left"></i></button>
+</div>
+<div style="background-color: white; padding: 5px">
+    <canvas id="myChart" width="400" height="400">
+
+    </canvas>
+</div>
+
+
+<div class="meta-user padd">
+    <p>A la fecha llevas ahorrado un <span style="color: rgba(64, 115, 158,1.0)" id="porc">0%</span> de tu meta, equivalente a
+        <span style="color: rgba(64, 115, 158,1.0)" id="ahorrosT">$0.00 MX</span>.</p>
+</div>
+<div style="text-align: center">
+    <h2>Agregar ahorro</h2>
+    <input type="number" id="ahorr" placeholder="0.00" style="text-align: center">
+    
+</div>
+<br>
+<div style="text-align: center">
+        <a onclick="insertAhorro()" class="myButton">Agregar</a>
+</div>
+
+<script src="scripts/firebase.js"></script>
+<script src="scripts/congelados.js"></script>
+</body>
+</html>

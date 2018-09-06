@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>SmartWallet</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/menu.css">
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+
+
+<link href="https://fonts.googleapis.com/css?family=Corben" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+<style>
+  img.logo{
+            background-color: white;
+            width: 50%;
+            height: 50%;
+            padding: 7% 7% 7% 7%;
+            border-radius: 50%;
+        }
+</style>
+</head>
+
+<body>
+  <i id="burger" class="material-icons" onclick="burger()">menu</i>
+<i id="quit" class="material-icons" onclick="quit()">clear</i>
+<div id="links">
+  <a href="planHome.html">Planes</a>
+  <a href="misGastosD.html">Gastos</a>
+  <a href="congelados.html" >Ahorro</a>
+  <a href="profile.html">Perfil</a>
+  <a onclick=" mainApp.logOut()">SingOut</a>
+</div>
+<br>
+<div style="text-align : center;">
+    <img src="images/wallet_logo.png" alt="Logo" class="logo">
+</div>
+<div class="card">
+    <h1>SmartWallet</h1>
+    <h1>Bienvenido</h1>
+    <h1 id="user"></h1>
+</div>
+  
+  <script src="scripts/firebase.js"></script>
+  <script src="scripts/menu.js"></script>
+</body>
+</html>

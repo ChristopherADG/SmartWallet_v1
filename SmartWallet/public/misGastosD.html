@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/gastos.css">
+    <title>Gastos</title>
+</head>
+
+<body>
+    <button type="button" class="btn-back" onclick="window.location.replace('menu.html')"><i class="fas fa-arrow-left"></i></button>
+        <div class="contact-area">
+        <div class="contact">
+          <main>
+            <section>
+              <div class="content">
+                <aside>
+                  <h1>Registro de gastos</h1>
+                </aside>
+            </div>
+            <div class="grid-menu">
+            <div class="content">
+            <button class="tablinks" id="gasto" onclick="openCity(event, 'diario')">
+                  <span>D</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"> <g class="nc-icon-wrapper" fill="#444444"> <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path> </g> </svg>
+                </button>
+            </div>
+            <div class="content">
+                <button class="tablinks" id="gasto" onclick="openCity(event, 'semanal')">
+                    <span>S</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"> <g class="nc-icon-wrapper" fill="#444444"> <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path> </g> </svg>
+                </button>
+            </div>
+            <div class="content">
+                    <button class="tablinks" id="gasto" onclick="openCity(event, 'mensual')">
+                      <span>M</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"> <g class="nc-icon-wrapper" fill="#444444"> <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path> </g> </svg>
+                    </button>
+                </div>
+            </div>
+              <br>
+            <div id="grid-muestra" class="title">
+                <div><p id="tiempoD">Diario</p><p id="totalTiempo">$800</p></div>
+            </div>
+            </section>
+          </main>
+          <nav id="">
+            <a>
+              <div class="table" id="diario">
+                    <table >
+                            <tr>
+                              <th>Hora</th>
+                              <th>Cantidad</th> 
+                            </tr>
+                            <tr>
+                              <td>9:14</td>
+                              <td>$300</td>
+                            </tr>
+                            <tr>
+                                <td>15:45</td>
+                                <td>$500</td>
+                            </tr>
+                    </table>
+                    <br>
+                    <div class="separator"></div>
+              </div>
+              <br>
+              
+              <div class="table" id="addGasto">
+                    <form action="misGastosD.html">
+                            <input type="number" name="gastoE" class="nInput" placeholder="Nuevo gasto">
+                            <br>
+                            <input type="submit" class="center">
+                            <!-- <button class="center">Submit</button> -->
+                    </form>
+              </div>
+              <div class="table" id="semanal">
+                    <table >
+                            <tr>
+                              <th>Hora</th>
+                              <th>Cantidad</th> 
+                            </tr>
+                            <tr>
+                              <td>Agosto/29</td>
+                              <td>$600</td>
+                            </tr>
+                            <tr>
+                                <td>Agost0/27</td>
+                                <td>$700</td>
+                            </tr>
+                          </table>
+              </div>
+              <div class="table" id="mensual">
+                    <table >
+                            <tr>
+                              <th>Hora</th>
+                              <th>Cantidad</th> 
+                            </tr>
+                            <tr>
+                              <td>Agosto/28</td>
+                              <td>$600</td>
+                            </tr>
+                            <tr>
+                                <td>Agost0/24</td>
+                                <td>$700</td>
+                            </tr>
+                            <tr>
+                              <td>Agosto/22</td>
+                              <td>$1000</td>
+                            </tr>
+                            <tr>
+                                <td>Agost0/21</td>
+                                <td>$700</td>
+                            </tr>
+                          </table>
+              </div>
+            </a>
+            
+          </nav>
+        </div>
+      </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script  src="scripts/gastos.js"></script>
+      </body>
+      
+      </html>
+
+      
